@@ -32,11 +32,9 @@ export class LoginComponent implements OnInit {
   
   onLogin(){
     if(this.loginForm.valid){
-      console.log(this.loginForm.value);
       this.auth.loginAPI(this.loginForm.value)
       .subscribe({
         next: (res) =>{
-          alert(res.message);
           console.log(res.token);
           this.auth.storeToken(res.token)
           localStorage.setItem("token", res.token);
@@ -56,9 +54,13 @@ export class LoginComponent implements OnInit {
         text: 'Usuario ó contraseña incorrecto. Favor de verificar',
       })
     }else{
-      console.log("No valido");
+      
       this.validateAllFormsFileds(this.loginForm);
-      alert("Formulario invalido");
+     Swal.fire({
+        icon: 'error',
+        title: '¡Error de formulario!',
+        text: 'Al parecer aún no has llenado los campos',
+      })
     }
   }
 
