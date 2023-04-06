@@ -10,26 +10,26 @@
                     <div class="panel-body p-3">
                         <form [formGroup]="loginForm">
                             <div class="form-group pt-3">
-                                <div class="input-field" [class.error]="loginForm.controls['User_name'].dirty && loginForm.hasError('required', 'User_name')">
+                                <div class="input-field" [class.error]="loginForm.controls['userName'].dirty && loginForm.hasError('required', 'userName')">
                                     <span class="fa fa-user p-2"></span>
-                                    <input formControlName="User_name" type="text" placeholder="User_name">
+                                    <input formControlName="userName" type="text" placeholder="userName">
                                 </div>
                             </div>
 
                             <small
-                                *ngIf="loginForm.controls['User_name'].dirty && loginForm.hasError('required', 'User_name')"
+                                *ngIf="loginForm.controls['userName'].dirty && loginForm.hasError('required', 'userName')"
                                 class="text-danger">*El usuario es requerido  </small>
                           
 
                             <div class="form-group pt-3">
-                                <div class="input-field" [class.error]="loginForm.controls['Pass'].dirty && loginForm.hasError('required', 'Pass')">
+                                <div class="input-field" [class.error]="loginForm.controls['pass'].dirty && loginForm.hasError('required', 'pass')">
                                     <span class="fa fa-lock p-2"></span>
-                                    <input formControlName="Pass" [type]="type" placeholder="Contraseña">
+                                    <input formControlName="pass" [type]="type" placeholder="Contraseña">
                                     <!-- Dejar ver contraseña -->
                                     <span (click)="ocultarContrasena()" class="fa {{eyeIcon}}"></span>
                                 </div>
                                 <small
-                                    *ngIf="loginForm.controls['Pass'].dirty && loginForm.hasError('required', 'Pass')"
+                                    *ngIf="loginForm.controls['pass'].dirty && loginForm.hasError('required', 'pass')"
                                     class="text-danger">*Contraseña requerida</small>
                             </div>
                             <div class="form-inline fr mt-4">
