@@ -1,0 +1,122 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">   
+                        <h3 class="pt-3 font-weight-bold">Edición/Eliminación Pacientes</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form [formGroup]="editarPacientesForm" (ngSubmit)="postForm(editarPacientesForm.value)">
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="editarPacientesForm.controls['nameP'].dirty && editarPacientesForm.hasError('required', 'nameP')">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="nameP" type="text" placeholder="Nombre del paciente">
+                                </div>
+                                <small
+                                    *ngIf="editarPacientesForm.controls['nameP'].dirty && editarPacientesForm.hasError('required', 'nameP')"
+                                    class="text-danger">El campo es requerido</small>
+                            </div>
+
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="editarPacientesForm.controls['evaluationDate'].dirty && editarPacientesForm.hasError('required', 'evaluationDate')">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="evaluationDate" type="date" placeholder="Día de evaluación">
+                                </div>
+                                <small
+                                    *ngIf="editarPacientesForm.controls['evaluationDate'].dirty && editarPacientesForm.hasError('required', 'evaluationDate')"
+                                    class="text-danger">El campo es requerido</small>
+                            </div>
+
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="editarPacientesForm.controls['birth'].dirty && editarPacientesForm.hasError('required', 'birth')">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="birth" type="date" placeholder="Día denacimiento">
+                                </div>
+                                <small
+                                    *ngIf="editarPacientesForm.controls['birth'].dirty && editarPacientesForm.hasError('required', 'birth')"
+                                    class="text-danger">El campo es requerido</small>
+                            </div>
+
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="editarPacientesForm.controls['age'].dirty && editarPacientesForm.hasError('required', 'age')">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="age" type="number" placeholder="Edad">
+                                </div>
+                                <small
+                                    *ngIf="editarPacientesForm.controls['age'].dirty && editarPacientesForm.hasError('required', 'age')"
+                                    class="text-danger">El campo es requerido</small>
+                            </div>
+
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="editarPacientesForm.controls['gender'].dirty && editarPacientesForm.hasError('required', 'gender')">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="gender" type="text" placeholder="Género">
+                                </div>
+                                <small
+                                    *ngIf="editarPacientesForm.controls['gender'].dirty && editarPacientesForm.hasError('required', 'gender')"
+                                    class="text-danger">El campo es requerido</small>
+                            </div>
+
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="editarPacientesForm.controls['schoolGrade'].dirty && editarPacientesForm.hasError('required', 'schoolGrade')">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="schoolGrade" type="text" placeholder="Grado escolar de la madre">
+                                </div>
+                                <small
+                                    *ngIf="editarPacientesForm.controls['schoolGrade'].dirty && editarPacientesForm.hasError('required', 'schoolGrade')"
+                                    class="text-danger">El campo es requerido</small>
+                            </div>
+
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="editarPacientesForm.controls['laterality'].dirty && editarPacientesForm.hasError('required', 'laterality')">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="laterality" type="text" placeholder="Lateralidad">
+                                </div>
+                                <small
+                                    *ngIf="editarPacientesForm.controls['laterality'].dirty && editarPacientesForm.hasError('required', 'laterality')"
+                                    class="text-danger">El campo es requerido</small>
+                            </div>
+
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="editarPacientesForm.controls['motherSchooling'].dirty && editarPacientesForm.hasError('required', 'motherSchooling')">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="motherSchooling" type="text" placeholder="Grado escolar de la madre">
+                                </div>
+                                <small
+                                    *ngIf="editarPacientesForm.controls['motherSchooling'].dirty && editarPacientesForm.hasError('required', 'motherSchooling')"
+                                    class="text-danger">El campo es requerido</small>
+                            </div>
+
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="editarPacientesForm.controls['fatherSchooling'].dirty && editarPacientesForm.hasError('required', 'fatherSchooling')">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="fatherSchooling" type="text" placeholder="Grado escolar del padre">
+                                </div>
+                                <small
+                                    *ngIf="editarPacientesForm.controls['fatherSchooling'].dirty && editarPacientesForm.hasError('required', 'fatherSchooling')"
+                                    class="text-danger">El campo es requerido</small>
+                            </div>
+
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="editarPacientesForm.controls['profiles_Id'].dirty && editarPacientesForm.hasError('required', 'profiles_Id')">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="profiles_Id" type="number" placeholder="Perfil">
+                                </div>
+                                <small
+                                    *ngIf="editarPacientesForm.controls['profiles_Id'].dirty && editarPacientesForm.hasError('required', 'profiles_Id')"
+                                    class="text-danger">El campo es requerido</small>
+                            </div>
+
+              
+                            <button type="submit" class="btn btn-primary btn-block mt-4 w-100">Guardar cambios</button>
+                            <button (click)="preConfirmToDelete()" class="btn btn-primary btn-block mt-4 w-100" type="button">Eliminar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

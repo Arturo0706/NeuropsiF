@@ -1,0 +1,40 @@
+<div class="container">
+
+    <h3>Lista de Pacientes</h3>
+    
+    <button type="button" class="btn btn-success" routerLink="/nuevoPaciente">Agregar paciente</button>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">NP</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Día de evaluación</th>
+            <th scope="col">Fecha de nacimiento</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Género</th>
+            <th scope="col">Grado escolar</th>
+            <th scope="col">Lateralidad</th>
+            <th scope="col">Escolaridad Madre</th>
+            <th scope="col">Escolaridad Padre</th>
+            <th scope="col">Perfil Id</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let indice = index; let pacientes of patient" (click)="editPatients(pacientes.id)">
+            <th scope="row">{{indice+1}}</th>
+            <td>{{pacientes.nameP}}</td>
+            <td>{{pacientes.evaluationDate}}</td>
+            <td>{{pacientes.birth}}</td>
+            <td>{{pacientes.age}}</td>
+            <td>{{pacientes.gender}}</td>
+            <td>{{pacientes.schoolGrade}}</td>
+            <td>{{pacientes.laterality}}</td>
+            <td>{{pacientes.motherSchooling}}</td>
+            <td>{{pacientes.fatherSchooling}}</td>
+            <td>{{pacientes.profiles_Id}}</td>
+          </tr>
+        </tbody>
+      </table>
+    
+    </div>
