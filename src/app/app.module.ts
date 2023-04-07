@@ -30,6 +30,10 @@ import { ParesasociadosComponent } from './Components/paresasociados/paresasocia
 import { ProcesoVisoEspacialComponent } from './Components/proceso-viso-espacial/proceso-viso-espacial.component';
 import { PruebaComponent } from './Components/prueba/prueba.component';
 import { SeriesSucesivasComponent } from './Components/series-sucesivas/series-sucesivas.component';
+import { MeCarasComponent } from './Components/me-caras/me-caras.component';
+import { MiComponente } from './Components/Fluidez_verbal/inputs/inputs.component';
+import { AppfluidezComponent } from './Components/Fluidez_verbal/fluidex.component';
+import { ResultadoComponent } from './Components/Fluidez_verbal/resultado/resultado.component';
 
 @NgModule({
   declarations: [
@@ -57,8 +61,12 @@ import { SeriesSucesivasComponent } from './Components/series-sucesivas/series-s
     ProcesoVisoEspacialComponent,
     PruebaComponent,
     RetencionDigitosProgresionComponent,
-    SeriesSucesivasComponent
-    
+    SeriesSucesivasComponent,
+    MeCarasComponent,
+    MiComponente, 
+    AppfluidezComponent,
+    ResultadoComponent
+
   ],
   imports: [
     BrowserModule,

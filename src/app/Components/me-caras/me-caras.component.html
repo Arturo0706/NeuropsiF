@@ -1,0 +1,68 @@
+<div class="container">
+  <h2>14. Evocación. Memoria de Caras</h2>
+  <h2>14.1 Evocación de Nombres</h2>
+  <p>
+    "Hace un momento le mostraré fotografías de algunas personas, ¿puede decirme cuáles eran sus
+    nombres?"
+    Si no lo recuerdas, añadir: "El primer nombre empezaba con L".
+</p>
+<p>Anotar si se obtiene entonces la respuesta y si el apellido es recordar espontáneamente. Si no, dar la primera 
+  letra del apellido.</p>
+<p>Si el sujeto responde con un apellido incorrecto pero que empieza con la letra correcta, decir: "No, no es ése,
+  pero sí empieza con G".</p>
+<p>Proceder con el segundo nombre de la misma manera. </p>  
+<P>Donde Espontáneo vale (2) y Clave vale (1)</P>
+<p>E = Espontáneo</p>
+<p>C = Clave</p>
+
+
+<form class="buttons-container">
+  <div *ngFor="let button of buttons">
+    <button type="button" (click)="addTotal(button)" [disabled]="button.selected">
+      {{ button.label }}
+    </button>
+  </div>
+  <br>
+  <div>Total {{ total }}/(8)</div>
+</form>
+<form class="button-container">
+<button type="button" (click)="reset()">Volver hacer la prueba</button>
+</form>
+
+<div class="container">
+
+<h2>14.2 Reconocimiento de Caras</h2>
+
+<p>Se le presenta al sujeto desde la lámina 13 hasta la lámina 16 y se le pide que identifique a las personas que hábia
+  visto antes. "Le voy a mostrar algunas fotografías, si alguna de ellas pertenece a las fotografías que usted vio
+  anteriormente, me dirá 'sí'; en caso contrario, 'no'".</p>
+  <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark">13</span>
+  </label>
+  <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark">14</span>
+  </label>
+  <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark">15</span>
+  </label>
+  <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="checkmark">16</span>
+  </label>
+  <form class="buttons-container">
+    <div *ngFor="let button of buttons">
+      <button type="button" (click)="addTotal(button)" [disabled]="button.selected">
+        {{ button.labell }}
+      </button>
+    </div>
+    <br>
+    <div>Total {{ total }}/(2)</div>
+  </form>
+<form class="button-container">
+<button type="button" (click)="reset()">Volver hacer la prueba</button>
+</form>
+
+</div>

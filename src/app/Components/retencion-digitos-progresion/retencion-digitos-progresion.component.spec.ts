@@ -8,9 +8,8 @@ describe('RetencionDigitosProgresionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RetencionDigitosProgresionComponent ]
-    })
-    .compileComponents();
+      declarations: [RetencionDigitosProgresionComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(RetencionDigitosProgresionComponent);
     component = fixture.componentInstance;

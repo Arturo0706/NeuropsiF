@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-6">
+      <h2></h2>
+      <form #form1="ngForm" (ngSubmit)="enviarDatos(form1, 'primer')">
+        <div class="form-group">
+          <label>Intrusiones :</label>
+          <input type="text" name="label1_1" class="form-control" ngModel>
+        </div>
+        <div class="form-group">
+          <label>Perseveraciones :</label>
+          <input type="text" name="label2_1" class="form-control" ngModel>
+        </div>
+        <div class="form-group">
+          <label>Total Semantico:</label>
+          <input type="text" name="label3_1" class="form-control" ngModel>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button> 
+      </form>
+    </div>
+    <div class="col-md-6">
+      <h2></h2>
+      <form #form2="ngForm" (ngSubmit)="enviarDatos(form2, 'segundo')">
+        <div class="form-group">
+          <label>Intrusiones :</label>
+          <input type="text" name="label1_2" class="form-control" ngModel>
+        </div>
+        <div class="form-group">
+          <label>Perseveraciones :</label>
+          <input type="text" name="label2_2" class="form-control" ngModel>
+        </div>
+        <div class="form-group">
+          <label>Total Fonologico:</label>
+          <input type="text" name="label3_2" class="form-control" ngModel>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </div>
+  

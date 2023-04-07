@@ -1,0 +1,31 @@
+<div class="form-group">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Nombres de Animales </h2>
+      <div class="row">
+        <div class="col-md-6" *ngFor="let caja of cajasIzquierda; let i = index">
+          <label class="label-caja">{{ i + 1 }}</label>
+          <input type="text" class="form-control caja-texto" [(ngModel)]="respuestasIzquierda[i]">
+        </div>
+        <div class="col-md-6" *ngFor="let caja of cajasDerecha; let i = index">
+          <label class="label-caja">{{ i + 15 }}</label>
+          <input type="text" class="form-control caja-texto" [(ngModel)]="respuestasDerecha[i]">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h2>Palabras que incian con la letra P </h2>
+      <div class="row">
+        <div class="col-md-6" *ngFor="let caja of cajasIzquierda; let i = index">
+          <label class="label-caja">{{ i + 1 }}</label>
+          <input type="text" class="form-control caja-texto" [(ngModel)]="respuestasIzquierda[i + 28]">
+        </div>
+        <div class="col-md-6" *ngFor="let caja of cajasDerecha; let i = index">
+          <label class="label-caja">{{ i + 15}}</label>
+          <input type="text" class="form-control caja-texto" [(ngModel)]="respuestasDerecha[i + 28]">
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary" (click)="enviarRespuestas()">Enviar</button>
+</div>

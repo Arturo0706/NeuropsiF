@@ -26,6 +26,12 @@ import { SeriesSucesivasComponent } from './Components/series-sucesivas/series-s
 import { EvocacionComponent } from './Components/evocacion/evocacion.component';
 import { Evocacion2Component } from './Components/evocacion2/evocacion2.component';
 import { ParesAsociadosComponent } from './Components/pares-asociados2/pares-asociados.component';
+import { MeCarasComponent } from './Components/me-caras/me-caras.component';
+import { MiComponente } from './Components/Fluidez_verbal/inputs/inputs.component';
+import { AppfluidezComponent } from './Components/Fluidez_verbal/fluidex.component';
+import { ResultadoComponent } from './Components/Fluidez_verbal/resultado/resultado.component';
+
+
 
 const ROUTES:Routes =[
   { path: '', component: LoginComponent, pathMatch:'full'},
@@ -56,6 +62,13 @@ const ROUTES:Routes =[
   {path:'nuevoPaciente', component:CreatePatientsComponent},
   {path:'editarEliminarPaciente/:id', component:EditDeletePatientsComponent},
   {path:'paresasociados2', component:ParesAsociadosComponent},
+  {path:'cubosenprogresion', component:RetencionDigitosProgresionComponent},
+  {path:'cubosenenregresion', component:RetencionDigitosProgresionComponent},
+  {path:'mecaras', component:MeCarasComponent},
+  {path:'fluidez', component:MiComponente},
+  {path:'fluidezverbal', component:AppfluidezComponent},
+  {path:'fluidezverbalRes', component:ResultadoComponent},
+
 
   
 ]
