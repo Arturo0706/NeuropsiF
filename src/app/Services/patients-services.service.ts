@@ -13,7 +13,7 @@ export class PatientsServicesService {
 
   url:string="https://localhost:7295/api"
 
-  //GetPatients
+  //GetPatientsñ
   getPatients():Observable<Patients[]>{
     let direccion = this.url + "/Patients";
     return this.http.get<Patients[]>(direccion);

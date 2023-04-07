@@ -1,4 +1,6 @@
 export interface AuthAPI {
-    user_name: string;
+    userName: string;
     pass: string;
+    message:string;
+    token:string;
 }

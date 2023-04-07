@@ -10,7 +10,8 @@ export interface Patients{
     motherSchooling:string;
     fatherSchooling:string;
     profiles_Id:number;
-    // available:boolean,
+    // nameProfile:string;
+   
 }
 
 

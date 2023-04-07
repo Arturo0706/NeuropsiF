@@ -5,13 +5,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { PatientsComponent } from './Components/Patients/patients/patients.component';
 import { CreatePatientsComponent } from './Components/Patients/create-patients/create-patients.component';
 import { EditDeletePatientsComponent } from './Components/Patients/edit-delete-patients/edit-delete-patients.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const ROUTES:Routes =[
 
-  { path: '', component: LoginComponent},
-  {path:'pacientes', component:PatientsComponent},
-  {path:'nuevoPaciente', component:CreatePatientsComponent},
-  {path:'editarEliminarPaciente/:id', component:EditDeletePatientsComponent},
+  { path: '', component: LoginComponent, pathMatch:'full'},
+  {path:'pacientes', component:PatientsComponent, canActivate:[AuthGuard]},
+  {path:'nuevoPaciente', component:CreatePatientsComponent,canActivate:[AuthGuard]},
+  {path:'editarEliminarPaciente/:id', component:EditDeletePatientsComponent,canActivate:[AuthGuard]},
 
 ]
 

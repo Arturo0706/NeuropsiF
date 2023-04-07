@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Patients } from 'src/app/Interfaces/Patients';
 import { PatientsServicesService } from 'src/app/Services/patients-services.service';
 import Swal from 'sweetalert2';
 
@@ -10,9 +11,14 @@ import Swal from 'sweetalert2';
   styleUrls: ['./create-patients.component.css']
 })
 export class CreatePatientsComponent {
+  
   patientsForm!:FormGroup;
 
   constructor(private fb:FormBuilder, private api:PatientsServicesService, private router:Router){}
+
+  patient:Patients[]=[];
+
+  
 
   ngOnInit():void{
     this.patientsForm = this.fb.group({
@@ -27,7 +33,15 @@ export class CreatePatientsComponent {
       fatherSchooling:['',Validators.required],
       profiles_Id:['',Validators.required],
     })
+    // this.api.getPatients().subscribe(data=>{
+    //   this.patient = data
+    //   console.log(data);
+    // })
+
+
   }
+
+  
 
   OnCreatePatiens(){
     if(this.patientsForm.valid){
@@ -41,7 +55,7 @@ export class CreatePatientsComponent {
             showConfirmButton: false,
             timer: 1500
           })
-          this.patientsForm.reset();
+          // this.patientsForm.reset();
           this.router.navigate(['pacientes']);
         }),
         error:(err)=>{
