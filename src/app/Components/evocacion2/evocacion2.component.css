@@ -1,0 +1,22 @@
+.centerTitle{
+    text-align: center;
+    margin: auto;
+    color: aqua;
+    text-shadow: 0.5;
+}
+.centerText{
+    text-align: center;
+    margin: auto;
+    text-shadow: 0.5;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.input1{
+    text-align: justify;  
+    height: 300px;
+    width: 90%;
+    border-color: red;
+}

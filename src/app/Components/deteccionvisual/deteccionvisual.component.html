@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Document</title>
+</head>
+<body>
+  <h1 style="text-align: center;">10. ATENCIÓN Y CONCENTRACIÓN. DETECCIÓN VISUAL</h1>
+  <br>
+  <div style="text-align: center;">
+  <img src="https://cdn-icons-png.flaticon.com/512/17/17734.png" style="height: 200px; width: 200px; " alt="">
+</div>
+  <br>
+  <h4 style="text-align: center;">Esta actividad consiste en marcar con una T todas las figuras que sean iguales a la anterior en menos de 60 segundos</h4>
+  <br>
+  <form #formularioMascota="ngForm" (ngSubmit)="formularioEnviado()">
+    <input type="text" name="omisiones" placeholder="Omisiones" [(ngModel)]="diezModel.omisones">
+    <br><br>
+    <input type="text" name="intrusiones" placeholder="Intrusiones" [(ngModel)]="diezModel.intrusiones">
+    <br><br>
+    <input type="text" name="total" placeholder="Total" [(ngModel)]="diezModel.total">
+    <br><br>
+    <button type="submit">Guardar</button>
+  </form>
+    
+  
+ 
+</body>
+</html>

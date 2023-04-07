@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>18. ATENCIÓN Y CONCENTRACIÓN. SERIES SUCESIVAS</h1>
+        <p>"Voy a pedirle que cuente de tres en tres, empezando con el 1 y hasta llegar al 40; por ejemplo, 1, 4. Continúe usted":</p>
+        
+        <p>En el caso de niños entre 6 y 8 años de edad detenerlos al llegar al 40 o a los 120 segundos de estar realizando la tarea.</p>
+        
+        <p>En el caso de personas de 9 años en adelante detenerlos al llegar a 40 o a los 45 segundos de estar realizando la tarea. (45 o 120 segundos) 1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40.</p>
+        <label>Tiempo (Segundos)</label>
+        <br>
+        <input type="number" [(ngModel)]="tiempo" placeholder="Tiempo (segundos)">
+        <br>
+        <br>
+        <label>Total (0, 1, 2, 3)</label>
+        <br>
+        <input type="number" [(ngModel)]="total" placeholder="Total (0, 1, 2, 3)">
+        <br>
+        <br>
+        <button (click)="enviarDatos()">Enviar</button>
+        <br>
+    </div>
+</body>
+</html>

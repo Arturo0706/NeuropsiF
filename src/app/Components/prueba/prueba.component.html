@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>RETENCIÓN DE DÍGITOS EN REGRESIÓN</h2>
+    <p>
+      “Voy a leer una serie de números. Cuando termine, usted me los repite al
+      revés, desde el último hasta el primero. Por ejemplo, si yo le digo: 2, 5;
+      usted me dice: 5, 2”
+    </p>
+    <p>Si logra repetir el primer ensayo se pasa a la serie siguiente.</p>
+    <p>
+      Si fracasa, se aplican los dos ensayos. Suspender después de dos fracasos
+      consecutivos."
+    </p>
+    <form class="buttons-container">
+      <div *ngFor="let button of buttons">
+        <button type="button" (click)="addTotal(button.value)">
+          {{ button.label }}
+        </button>
+      </div>
+      <div>Total {{ total }}/(8)</div>
+    </form>
+  </div>
+  

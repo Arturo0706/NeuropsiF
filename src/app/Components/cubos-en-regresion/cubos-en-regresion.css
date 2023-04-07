@@ -1,0 +1,39 @@
+.buttons-container div {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.buttons-container div:nth-child(7n) {
+    display: block;
+    clear: both;
+}
+
+.buttons-container button {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container p,
+.container button {
+    padding: 5px;
+}
+
+.container div:last-child {
+    text-align: right;
+    padding-right: 15px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+button:focus {
+    color: rgb(49, 162, 152);
+}

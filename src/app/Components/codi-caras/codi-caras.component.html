@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>7. CODIFICACIÓN. CARAS</h2>
+  <p>
+      "A continuación le mostraré las fotografías de algunas personas, junto con sus nombres.
+       En cuanto yo termine usted deberá repetir los nombres que recuerde. Más tarde le pediré
+       que repita nuevamente los nombres y le mostraré estas fotografías junto con otras, para
+       que usted reconozca las que le voy a mostrar ahora."
+  </p>
+  <p>Se le muestra la lámina 5 y se le dice: "Ella es Lourdes Guzmán".</p>
+  <p>Se retira la lámina 5, se presenta la 6 y se le dice: "Él es Efraín Ruiz".</p>
+  <p>Se retira la lámina 6 y se da la indicación siguiente:"¿Puede repetirme los nombres de las personas
+    que le acabo de mostrar?."</p>
+    <p>(Evocación 20 minutos después).</p>
+    <p>Lourdes Guzmán</p>
+    <p>Efraín Ruiz</p>
+      <form class="buttons-container">
+        <div *ngFor="let button of buttons">
+          <button type="button" (click)="addTotal(button)" [disabled]="button.selected">
+            {{ button.label }}
+          </button>
+        </div>
+        <br>
+        <div>Total {{ total }}/(4)</div>
+      </form>
+<form class="button-container">
+  <button type="button" (click)="reset()">Volver hacer la prueba</button>
+</form>
+</div>

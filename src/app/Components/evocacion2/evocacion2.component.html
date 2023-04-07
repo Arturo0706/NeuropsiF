@@ -1,0 +1,138 @@
+
+<h1 class="centerTitle">Evocacion. Memoria Logica</h1>
+
+<h3>¿Recuerda las historias que le lei antes?</h3>
+
+<h6>Ahora digame todo lo que pueda recordar de la segunda historias</h6>
+
+<form action="" [formGroup]="formEvocacion" (ngSubmit)="DB13()" >
+
+    <label for="" class="centerTitle" >Parrafo 1:</label><br>
+
+    <textarea name="parrafo1" id="parrafo1" cols="30" rows="10" class="input1"  placeholder="Escribe a qui lo que recuerdas..." formControlName="parrafo1"></textarea>
+
+    <div class="alert alert-danger" [hidden]="parrafo1.valid || parrafo1.pristine">El campo "Parafo 1:" es obligatorio.</div>
+    
+    <p>(Ver los cuadros para calificacion de Memoria Logica anexos al final del protocolo de aplicacion).</p>
+    
+    <div class="input-group">
+    <label for="" class="input-group-text">Unidad Historia</label>
+    <input type="text" class="form-control" formControlName="historia"></div>
+
+    <div class="alert alert-danger mt-2" [hidden]="historia.valid || historia.pristine">
+        <span *ngIf="historia.errors?.['required']">
+            El campo "Unidad Historia" es obligatorio.
+        </span>
+        <span *ngIf="historia.errors?.['pattern']">
+            Solo se aceptan valores de caracter numerico.
+        </span>
+    </div>
+
+    <div class="input-group">
+        <label for="" class="input-group-text">Unidad Tema
+        </label>
+        <input type="text" class="form-control"
+        formControlName="tema">  
+    </div>
+
+    <div class="alert alert-danger mt-2" [hidden]="tema.valid || tema.pristine">
+        <span *ngIf="tema.errors?.['required']">
+            El campo "Unidad Tema" es obligatorio.
+        </span>
+        <span *ngIf="tema.errors?.['pattern']">
+            Solo se aceptan valores de caracter numerico.
+        </span>
+    </div>
+
+    <!-- ----------------------------------------------------------------------------------------------- -->
+
+    <label for="" class="centerTitle" >Parrafo 2:</label><br>
+
+    <textarea name="parrafo2" id="parrafo2" cols="30" rows="10" class="input1"  placeholder="Escribe a qui lo que recuerdas..." formControlName="parrafo2"></textarea>
+
+    <div class="alert alert-danger" [hidden]="parrafo2.valid || parrafo2.pristine">El campo "Parafo 2:" es obligatorio.</div>
+    
+    <p>(Ver los cuadros para calificacion de Memoria Logica anexos al final del protocolo de aplicacion).</p>
+    
+    <div class="input-group">
+    <label for="" class="input-group-text">Unidad Historia</label>
+    <input type="text" class="form-control" formControlName="historia2"></div>
+
+    <div class="alert alert-danger mt-2" [hidden]="historia2.valid || historia2.pristine">
+        <span *ngIf="historia2.errors?.['required']">
+            El campo "Unidad Historia" es obligatorio.
+        </span>
+        <span *ngIf="historia2.errors?.['pattern']">
+            Solo se aceptan valores de caracter numerico.
+        </span>
+    </div>
+
+    <div class="input-group">
+        <label for="" class="input-group-text">Unidad Tema
+        </label>
+        <input type="text" class="form-control"
+        formControlName="tema2">  
+    </div>
+
+    <div class="alert alert-danger mt-2" [hidden]="tema2.valid || tema2.pristine">
+        <span *ngIf="tema2.errors?.['required']">
+            El campo "Unidad Tema" es obligatorio.
+        </span>
+        <span *ngIf="tema2.errors?.['pattern']">
+            Solo se aceptan valores de caracter numerico.
+        </span>
+    </div>
+
+    <!-- ---------------------------------------------------------------------------------------------- -->
+
+    <div class="input-group">
+        <label for="" class="input-group-text">Total Promedio Historias
+        </label>
+        <input type="text" class="form-control"
+        formControlName="phistoria">  
+    </div>
+
+    <div class="alert alert-danger mt-2" [hidden]="phistoria.valid || phistoria.pristine">
+        <span *ngIf="phistoria.errors?.['required']">
+            El campo "Total Promedio Historias" es obligatorio.
+        </span>
+        <span *ngIf="phistoria.errors?.['pattern']">
+            Solo se aceptan valores de caracter numerico.
+        </span>
+    </div>
+
+    <div class="input-group">
+        <label for="" class="input-group-text">Total Promedio Temas
+        </label>
+        <input type="text" class="form-control"
+        formControlName="ptema">  
+    </div>
+
+    <div class="alert alert-danger mt-2" [hidden]="ptema.valid || ptema.pristine">
+        <span *ngIf="ptema.errors?.['required']">
+            El campo "Total Promedio Temas" es obligatorio.
+        </span>
+        <span *ngIf="ptema.errors?.['pattern']">
+            Solo se aceptan valores de caracter numerico.
+        </span>
+    </div>
+
+    <div class="input-group">
+        <label for="" class="input-group-text">Porcentaje de Evocacion
+        </label>
+        <input type="text" class="form-control"
+        formControlName="pevocacion">  
+    </div>
+
+    <div class="alert alert-danger mt-2" [hidden]="pevocacion.valid || pevocacion.pristine">
+        <span *ngIf="pevocacion.errors?.['required']">
+            El campo "Porcentaje de Evocacion" es obligatorio.
+        </span>
+        <span *ngIf="pevocacion.errors?.['pattern']">
+            Solo se aceptan valores de caracter numerico.
+        </span>
+    </div>
+
+    <button class="btn btn-primary" [disabled]="formEvocacion.invalid">Guardar</button>
+    
+</form>

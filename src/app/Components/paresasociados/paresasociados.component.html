@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 style="text-align: center;">21.EVOCACIÓN.PARES ASOCIADOS</h1>
+  <h4>Instrucciones:</h4>
+  <h4 style="text-align:justify;">
+    "¿Recuerda los pares de palabras que aprendió hace un momento?"</h4>
+    <br>
+    <h4 style="text-align: justify;">"Voy a decirle la primera palabra de cada par y usted deberá decirme la segunda"</h4>
+      <br>
+     
+        <h4 style="text-align: justify;">1.Elefante (vidrio) _______ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   7.Fruta  (uva)  _______</h4>
+        <h4 style="text-align: justify;">2.Cielo    (hielo)  _______  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  8.Camión (melón)  _______</h4>
+        <h4 style="text-align: justify;">3.Metal (fierro)    _______   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9.Pantalón (blusa)  _______</h4>
+        <h4 style="text-align: justify;">4.Coche (payaso)    _______    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.Accidente (oscuridad)  _______</h4>
+        <h4 style="text-align: justify;">5.Huevo   (nuevo)   _______    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.Foco (coco)  _______</h4>
+        <h4 style="text-align: justify;">6.Plato  (lobo)     _______    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.Flor (árbol)  _______</h4>
+     
+          <br>
+        
+  <form #formularioMascota="ngForm" (ngSubmit)="formularioEnviado()">
+   
+    Errores
+    <input type="text" name="aciertos" placeholder="Errores" [(ngModel)]="veintiunoModel.errores">
+    <br><br>
+     
+        Intrusiones
+    <input type="text" name="aciertos" placeholder="Intrusiones" [(ngModel)]="veintiunoModel.intrusiones">
+    <br><br>
+ 
+    Perseveraciones:
+    <input type="text" name="intrusiones" placeholder="Perseveraciones" [(ngModel)]="veintiunoModel.perseveraciones">
+    <br><br>
+    Total(12):
+    <input type="text" name="total" placeholder="Total" [(ngModel)]="veintiunoModel.total">
+    <br><br>
+
+    Porcentaje de evocacion:
+    <input type="text" name="total" placeholder="Porcentaje de evocacion" [(ngModel)]="veintiunoModel.porcendeevocacion">
+    <br><br>
+ 
+    <button type="submit">Guardar</button>
+  </form>
+    <br>
+    <br>
+  
+ 
+</body>
+</html>

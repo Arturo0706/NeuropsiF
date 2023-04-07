@@ -1,0 +1,435 @@
+<div class="first-division">
+  <h1>11. CODIFICACIÓN. PARES ASOCIADOS</h1>
+  <p>
+    Voy a leerle una lista de pares de palabras. Al terminar, le diré la primera
+    palabra de cada par y usted deberá decirme la segunda. Por ejemplo, si le
+    digo ‘mesa - silla’ y después ‘lápiz - cama’, le pediré que me diga con qué
+    palabra iba ‘mesa’ y usted deberá responder ‘silla’ y con qué palabra iba
+    ‘lápiz’ y usted deberá responder ‘cama’. Más adelante le voy a pedir que
+    nuevamente me diga la segunda palabra de cada par*.’ Una vez que la persona
+    haya comprendido las instrucciones proceda a aplicar la prueba. Proporcione
+    los tres ensayos. (Evocación 20 minutos después).
+  </p>
+</div>
+
+<div class="second-division">
+  <div class="column">
+    <table>
+      <tr>
+        <td>
+          <div class="box">
+            <span>Lista de aprendizaje</span>
+            <div class="tabla2-con">
+              <p>Ensayo 1</p>
+              <div class="tabla_ajustada">
+                <td>
+                  <p>Fruta</p>
+                  <p>Camión</p>
+                  <p>Accidente</p>
+                  <p>Metal</p>
+                  <p>Elefante</p>
+                  <p>Coche</p>
+                  <p>Cielo</p>
+                  <p>Pantalón</p>
+                  <p>Huevo</p>
+                  <p>Flor</p>
+                  <p>Plato</p>
+                  <p>Foco</p>
+                </td>
+                <td>
+                  <p>- Uva</p>
+                  <p>- Melón</p>
+                  <p>- Oscuridad</p>
+                  <p>- Fierro</p>
+                  <p>- Vidrio</p>
+                  <p>- Payaso</p>
+                  <p>- Hielo</p>
+                  <p>- Blusa</p>
+                  <p>- Nuevo</p>
+                  <p>- Árbol</p>
+                  <p>- Lobo</p>
+                  <p>- Coco</p>
+                </td>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <table class="tabla-con">
+          <tr>
+            <th>Lista de Evocación</th>
+            <th>Respuesta</th>
+            <th>No Asociación</th>
+            <th class="columna-4">Asoc. Fonológ.</th>
+            <th class="columna-5">Asoc. Semánt.</th>
+          </tr>
+          <tr *ngFor="let row of rows">
+            <td>{{ row.col1 }}</td>
+            <td>
+              <input
+                type="text"
+                [(ngModel)]="row.col2"
+                (change)="answerCheckbox()"
+              />
+            </td>
+            <td
+              [ngStyle]="{
+                'background-color': hasCheckbox(row, 1, 1) ? 'white' : '#6BC6BE'
+              }"
+            >
+              <input
+                type="checkbox"
+                [(ngModel)]="row.col3"
+                (change)="sumCheckbox()"
+                *ngIf="hasCheckbox(row, 1, 1)"
+              />
+            </td>
+            <td
+              [ngStyle]="{
+                'background-color': hasCheckbox(row, 1, 2) ? 'white' : '#6BC6BE'
+              }"
+            >
+              <input
+                type="checkbox"
+                [(ngModel)]="row.col4"
+                (change)="sumCheckbox()"
+                *ngIf="hasCheckbox(row, 1, 2)"
+              />
+            </td>
+            <td
+              [ngStyle]="{
+                'background-color': hasCheckbox(row, 1, 3) ? 'white' : '#6BC6BE'
+              }"
+            >
+              <input
+                type="checkbox"
+                [(ngModel)]="row.col5"
+                (change)="sumCheckbox()"
+                *ngIf="hasCheckbox(row, 1, 3)"
+              />
+            </td>
+          </tr>
+        </table>
+        <p class="right-text">
+          <span
+            >No Asociación,
+            {{ calculateColumnTotal(this.rows, "col3") }}/(4)</span
+          >
+          <span
+            >Asoc. Fonológ.,
+            {{ calculateColumnTotal(this.rows, "col4") }}/(4)</span
+          >
+          <span
+            >Asoc. Semánt.,
+            {{ calculateColumnTotal(this.rows, "col5") }}/(4)</span
+          >
+        </p>
+      </tr>
+      <tr>
+        <td>
+          <span class="right-text">Curva de aprendizaje |</span>
+          <span class="right-text">
+            Total
+            {{
+              calculateColumnTotal(this.rows, "col3") +
+                calculateColumnTotal(this.rows, "col4") +
+                calculateColumnTotal(this.rows, "col5")
+            }}/(12)
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="column">
+    <table>
+      <tr>
+        <td>
+          <div class="box">
+            <span>Lista de aprendizaje</span>
+            <div class="tabla2-con">
+              <p>Ensayo 1</p>
+              <div class="tabla_ajustada">
+                <td>
+                  <p>Metal</p>
+                  <p>Huevo</p>
+                  <p>Pantalón</p>
+                  <p>Plato</p>
+                  <p>Cielo</p>
+                  <p>Accident</p>
+                  <p>Fruta</p>
+                  <p>Camió</p>
+                  <p>Elefante</p>
+                  <p>Foco</p>
+                  <p>Flot</p>
+                  <p>Coche</p>
+                </td>
+                <td>
+                  <p>- Fierro</p>
+                  <p>- Nuevo</p>
+                  <p>- Blusa</p>
+                  <p>- Lobo</p>
+                  <p>- Hielo</p>
+                  <p>- Oscuridad</p>
+                  <p>- Uva</p>
+                  <p>- Melón</p>
+                  <p>- vidrio</p>
+                  <p>- Coco</p>
+                  <p>- Árbol</p>
+                  <p>- Payaso</p>
+                </td>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <table class="tabla-con">
+          <tr>
+            <th>Lista de Evocación</th>
+            <th>Respuesta</th>
+            <th>No Asociación</th>
+            <th class="columna-4">Asoc. Fonológ.</th>
+            <th class="columna-5">Asoc. Semánt.</th>
+          </tr>
+          <tr *ngFor="let row of rows2">
+            <td>{{ row.col1 }}</td>
+            <td>
+              <input
+                type="text"
+                [(ngModel)]="row.col2"
+                (change)="answerCheckbox()"
+              />
+            </td>
+            <td
+              [ngStyle]="{
+                'background-color': hasCheckbox(row, 2, 1) ? 'white' : '#6BC6BE'
+              }"
+            >
+              <input
+                type="checkbox"
+                [(ngModel)]="row.col3"
+                (change)="sumCheckbox()"
+                *ngIf="hasCheckbox(row, 2, 1)"
+              />
+            </td>
+            <td
+              [ngStyle]="{
+                'background-color': hasCheckbox(row, 2, 2) ? 'white' : '#6BC6BE'
+              }"
+            >
+              <input
+                type="checkbox"
+                [(ngModel)]="row.col4"
+                (change)="sumCheckbox()"
+                *ngIf="hasCheckbox(row, 2, 2)"
+              />
+            </td>
+            <td
+              [ngStyle]="{
+                'background-color': hasCheckbox(row, 2, 3) ? 'white' : '#6BC6BE'
+              }"
+            >
+              <input
+                type="checkbox"
+                [(ngModel)]="row.col5"
+                (change)="sumCheckbox()"
+                *ngIf="hasCheckbox(row, 2, 3)"
+              />
+            </td>
+          </tr>
+        </table>
+        <p class="right-text">
+          <span
+            >No Asociación,
+            {{ calculateColumnTotal(this.rows2, "col3") }}/(4)</span
+          >
+          <span
+            >Asoc. Fonológ.,
+            {{ calculateColumnTotal(this.rows2, "col4") }}/(4)</span
+          >
+          <span
+            >Asoc. Semánt.,
+            {{ calculateColumnTotal(this.rows2, "col5") }}/(4)</span
+          >
+        </p>
+      </tr>
+      <tr>
+        <td>
+          <span class="right-text">Curva de aprendizaje |</span>
+          <span class="right-text">
+            Total
+            {{
+              calculateColumnTotal(this.rows2, "col3") +
+                calculateColumnTotal(this.rows2, "col4") +
+                calculateColumnTotal(this.rows2, "col5")
+            }}/(12)
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="column">
+    <table>
+      <tr>
+        <td>
+          <div class="box">
+            <span>Lista de aprendizaje</span>
+            <div class="tabla2-con">
+              <p>Ensayo 1</p>
+              <div class="tabla_ajustada">
+                <td>
+                  <p>Plato</p>
+                  <p>Flor</p>
+                  <p>Elefante</p>
+                  <p>Foco</p>
+                  <p>Coche</p>
+                  <p>Huevo</p>
+                  <p>Pantalón</p>
+                  <p>Cielo</p>
+                  <p>Metal</p>
+                  <p>Accidente</p>
+                  <p>Fruta</p>
+                  <p>Camión</p>
+                </td>
+                <td>
+                  <p>- Lobo</p>
+                  <p>- Árbol</p>
+                  <p>- Vidrio</p>
+                  <p>- Coco</p>
+                  <p>- Payaso</p>
+                  <p>- Nuevo</p>
+                  <p>- Blusa</p>
+                  <p>- Hielo</p>
+                  <p>- Fierro</p>
+                  <p>- Oscuridad</p>
+                  <p>- Uva</p>
+                  <p>- Melón</p>
+                </td>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <table class="tabla-con">
+          <tr>
+            <th>Lista de Evocación</th>
+            <th>Respuesta</th>
+            <th>No Asociación</th>
+            <th class="columna-4">Asoc. Fonológ.</th>
+            <th class="columna-5">Asoc. Semánt.</th>
+          </tr>
+          <tr *ngFor="let row of rows3">
+            <td>{{ row.col1 }}</td>
+            <td>
+              <input
+                type="text"
+                [(ngModel)]="row.col2"
+                (change)="answerCheckbox()"
+              />
+            </td>
+            <td
+              [ngStyle]="{
+                'background-color': hasCheckbox(row, 3, 1) ? 'white' : '#6BC6BE'
+              }"
+            >
+              <input
+                type="checkbox"
+                [(ngModel)]="row.col3"
+                (change)="sumCheckbox()"
+                *ngIf="hasCheckbox(row, 3, 1)"
+              />
+            </td>
+            <td
+              [ngStyle]="{
+                'background-color': hasCheckbox(row, 3, 2) ? 'white' : '#6BC6BE'
+              }"
+            >
+              <input
+                type="checkbox"
+                [(ngModel)]="row.col4"
+                (change)="sumCheckbox()"
+                *ngIf="hasCheckbox(row, 3, 2)"
+              />
+            </td>
+            <td
+              [ngStyle]="{
+                'background-color': hasCheckbox(row, 3, 3) ? 'white' : '#6BC6BE'
+              }"
+            >
+              <input
+                type="checkbox"
+                [(ngModel)]="row.col5"
+                (change)="sumCheckbox()"
+                *ngIf="hasCheckbox(row, 3, 3)"
+              />
+            </td>
+          </tr>
+        </table>
+        <p class="right-text">
+          <span
+            >No Asociación,
+            {{ calculateColumnTotal(this.rows3, "col3") }}/(4)</span
+          >
+          <span
+            >Asoc. Fonológ.,
+            {{ calculateColumnTotal(this.rows3, "col4") }}/(4)</span
+          >
+          <span
+            >Asoc. Semánt.,
+            {{ calculateColumnTotal(this.rows3, "col5") }}/(4)</span
+          >
+        </p>
+      </tr>
+      <tr>
+        <td>
+          <span class="right-text">Curva de aprendizaje |</span>
+          <span class="right-text">
+            Total
+            {{
+              calculateColumnTotal(this.rows3, "col3") +
+                calculateColumnTotal(this.rows3, "col4") +
+                calculateColumnTotal(this.rows3, "col5")
+            }}/(12)
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<br />
+<div class="third-division">
+  <p class="left-text">
+    Errores:
+    {{
+      36 -
+        (calculateTotal("col3") +
+          calculateTotal("col4") +
+          calculateTotal("col5"))
+    }}
+  </p>
+
+  <p class="input-container">
+    <span>Intrusiones</span>
+    <input type="number" [(ngModel)]="intrusiones" class="my-input" />
+  </p>
+
+  <p class="input-container">
+    <span>Perseveraciones</span>
+    <input type="number" [(ngModel)]="Perseveraciones" class="my-input" />
+  </p>
+
+  <span class="right-text"
+    >VOLUMEN PROMEDIO:
+    {{
+      ((calculateTotal("col3") +
+        calculateTotal("col4") +
+        calculateTotal("col5")) /
+        36) *
+        12 | number : "1.0-0"
+    }}</span
+  >
+
+  <button class="buton-fin" (click)="answerCheckbox()">Guardar</button>
+</div>

@@ -1,0 +1,33 @@
+<div class="container">
+    <h2>ATENCION Y CONCENTRACION . CUBOS EN PROGRECION</h2>
+    <p>Se colocan los cubos de manera sobre el diagrama adjunto</p>
+    <ls>
+    </ls>
+    <p>"Voy a señalar una serie de cubos . Cuando termine, ustede debera señalarlo en el mismo orden".</p>
+    <p>
+      Si logra repetir el siguiente ensayo , se pasa a la siguiente serie.
+    </p>
+    <p>
+      Si fracasa se aplica los dos ensayos .
+    </p>
+    <p>
+      Suspender despues de dos fracasos consecutivos 
+    </p>
+    <p><i class="fas fa-centercode    ">8-9-1    3   4-6-7-3   4   8-1-6-2-9   5   7-3-5-9-7-4   6    5-2-4-8-5-3-6    7  </i>
+    </p>
+    <p><i class="fas fa-centercode    ">5-9-2    3   2-5-8-3   4   3-5-7-9-3   5   6-8-3-4-5-1   6    4-1-6-3-7-9-2    7  </i>
+    </p>
+    <p> 3-6-8-1-4-9-1-5   8    4-1-8-5-7-2-3-9-6   9
+    </p>
+    <p> 6-9-7-1-8-2-3-4   8    1-8-2-9-7-3-4-6-5   9
+    </p>
+    <form class="buttons-container">
+      <div *ngFor="let button of buttons">
+        <button type="button" (click)="addTotal(button.value)">
+          {{ button.label }}
+        </button>
+      </div>
+      <div>Total {{ total }}/(8)</div>
+    </form>
+  </div>
+  

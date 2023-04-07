@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    
+</head>
+<body>
+
+    <section class="d-flex justify-content-center align-items-center">
+        <div class="card shadow col-xs-12 col-sm-6 col-md-6 col-lg-4   p-4"> 
+            <div class=>
+              
+                <h4 class="text-center">  &nbsp; MEMORIA VERBAL POR RECONOCIMIENTO</h4>
+
+            </div>
+
+            <div class=>
+              
+              <h6 class="text-center">  "Voy a leerle una lista de palabras, si alguna de ellas pertenece a las
+                palabras que usted memorizo anteriormente, me dira "si"; en caso contrario, 
+                "no".</h6>
+                
+
+
+          </div>
+            <div class="mb-1">
+                <form (submit)="onSubmit()">
+                  
+                        
+                       
+
+
+                            <div *ngFor="let item of items">
+                                <input type="checkbox" [(ngModel)]="item.selected" name="{{item.name}}"(ngModelChange)="countSelected()">
+                                {{ item.name }}
+                              </div>
+                              <div class="form-outline">
+
+
+
+
+
+                        <br><br>
+                        
+                            <div class="form-outline">
+                                <p>Aciertos: {{ numSelected }}</p>
+                                <p>Falsos Positivos: {{ numUnselected }}</p>
+                                <p>Total: {{ numSelected }}</p>
+                        
+                        </div>
+
+                
+
+
+
+                        <div class="form-outline">
+                            <button style="margin: 5px" id ="botton" class="col-5 btn btn-success d-flex justify-content-between ">
+                                <span>Enviar </span><i id="icono" class="bi bi-cursor-fill "></i>
+                            </button>
+                           
+                            <button style="margin: 5px" id ="botton" (click)="anterior()"class="col-5 btn btn-secondary d-flex justify-content-between ">
+                                <span>Anterior </span><i ></i>
+                            </button>
+                        </div>
+
+                    </div>
+
+             
+
+
+            </form>     
+               
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

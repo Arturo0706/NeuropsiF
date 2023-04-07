@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    
+</head>
+<body>
+
+    <section class="d-flex justify-content-center align-items-center">
+        <div class="card shadow col-xs-12 col-sm-6 col-md-6 col-lg-4   p-4"> 
+            <div >
+              
+                <h4 class="text-center">  &nbsp; MEMORIA VERBAL POR CLAVES</h4>
+
+            </div>
+
+            <div >
+              
+              <h6 class="text-center"> "De la lista de palabras que se aprendio, menciona algunas frutas"  </h6>
+          </div>
+
+          <div >
+              
+            <h6 class="text-center"> "¿Cuales eran?"  </h6>
+        </div>
+          <div >
+              
+            <h6 class="text-center">  "¿Cuales eran partes del cuerpo?"</h6>
+
+        </div>
+
+        <div >
+              
+            <h6 class="text-center">  "¿Cuales eran animales?"</h6>
+
+        </div>
+            <div class="mb-1">
+               
+                  
+                        
+                <form >
+
+
+                                            
+                        <div class="form-outline">
+                            <input type="number"  class="form-control" id="number1" name="number1" [(ngModel)]="numbers[0]" />
+                            <label class="form-label" for="typeNumber">Frutas</label>
+                        </div>
+                        
+                        
+                        <div class="form-outline">
+                            <input type="number"  id="number2" name="number2" [(ngModel)]="numbers[1]"class="form-control" />
+                            <label class="form-label" for="typeNumber">Partes del cuerpo</label>
+                        </div>
+
+                        <div class="form-outline">
+                            <input type="number"   id="number3" name="number3" [(ngModel)]="numbers[2]"class="form-control" />
+                            <label class="form-label" for="typeNumber">Animales</label>
+                        </div>
+
+
+                        <br><br>
+
+
+                        <div class="form-outline">
+                            <input type="number"   id="number4" name="number4" [(ngModel)]="Intrusiones"  name="Intrusiones"class="form-control" />
+                            <label class="form-label" for="typeNumber">Intrusiones</label>
+
+                            <div class="form-outline">
+                                <input type="number"   id="number5" name="number5" [(ngModel)]="Perseveraciones"  name="Perseveraciones"class="form-control" />
+                                <label class="form-label" for="typeNumber">Perseveraciones</label>
+                            </div>
+
+                        </div>
+
+
+                        <br><br>
+
+                        <div class="form-outline">
+                            <p>Total: {{ sum }}</p>
+                        </div>
+
+                        <div class="form-outline">
+                        <button style="margin: 5px" id ="botton" (click)="sumNumbers()" class="col-5 btn btn-success d-flex justify-content-between ">
+                            <span>Enviar </span><i id="icono" class="bi bi-cursor-fill "></i>
+                        </button>
+                        <button style="margin: 5px" id ="botton" (click)="siguiente()"class="col-5 btn btn-secondary d-flex justify-content-between ">
+                            <span>Siguiente </span><i ></i>
+                        </button>
+                        <button style="margin: 5px" id ="botton" (click)="anterior()"class="col-5 btn btn-secondary d-flex justify-content-between ">
+                            <span>Anterior </span><i ></i>
+                        </button>
+                    </div>
+
+
+
+                    
+
+              
+
+            
+
+
+            </form>     
+               
+
+
+           
+
+           
+
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,200 @@
+<form (ngSubmit)="submitForm()">
+
+    <h1>REGISTRO DE APLICACIÓN</h1>
+
+    <h2>Orientación</h2>
+    <h3>a) Tiempo</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Preguntas</th>
+                <th scope="col">Respuesta</th>
+                <th scope="col">Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <label for="1" class="form-label">¿En qué día estamos?</label> 
+                </td>
+                <td>
+                    <!-- <label>Nombre:</label> -->
+                    <input type="text" name="dia" [(ngModel)]="dia" id="1">
+                   
+                </td>
+                <td>
+                    <div class="form-check">
+                        <input name="dia" [(ngModel)]="valorDia" value="0" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          0
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input name="dia" [(ngModel)]="valorDia" value="1" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          1
+                        </label>
+                      </div>
+                </td>
+            </tr>
+            <tr>
+                <td>¿En qué mes estamos?</td>
+                <td>
+                    <!-- <label>Nombre:</label> -->
+                    <input type="text" name="mes" [(ngModel)]="mes">
+                   
+                </td>
+                <td>
+                    <div class="form-check">
+                        <input name="dia" [(ngModel)]="valorMes" value="0" class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault3">
+                        <label class="form-check-label" for="flexRadioDefault3">
+                          0
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input name="dia" [(ngModel)]="valorMes" value="1" class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault4" checked>
+                        <label class="form-check-label" for="flexRadioDefault4">
+                          1
+                        </label>
+                      </div>
+                </td>
+            </tr>
+            <tr>
+                <td>¿En qué año estamos?</td>
+                <td>
+                    <!-- <label>Nombre:</label> -->
+                    <input type="text" name="ano" [(ngModel)]="ano">
+                   
+                </td>
+                <td>
+                    <div class="form-check">
+                        <input name="dia" [(ngModel)]="valorAno" value="0" class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault5">
+                        <label class="form-check-label" for="flexRadioDefault5">
+                          0
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input name="dia" [(ngModel)]="valorAno" value="1" class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault6" checked>
+                        <label class="form-check-label" for="flexRadioDefault6">
+                          1
+                        </label>
+                      </div>
+                </td>
+            </tr>
+            <tr>
+                <td>¿En qué hora estamos en este momento?</td>
+                <td>
+                    <!-- <label>Nombre:</label> -->
+                    <input type="text" name="hora" [(ngModel)]="hora">
+                   
+                </td>
+                <td>
+                    <div class="form-check">
+                        <input name="dia" [(ngModel)]="valorHora" value="0" class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault7">
+                        <label class="form-check-label" for="flexRadioDefault7">
+                          0
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input name="dia" [(ngModel)]="valorHora" value="1" class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault8" checked>
+                        <label class="form-check-label" for="flexRadioDefault8">
+                          1
+                        </label>
+                      </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h3>b) Espacio</h3>
+        <table class="table">
+            <thead>
+                <tr>
+
+                    <th scope="col">Preguntas</th>
+                    <th scope="col">Respuesta</th>
+                    <th scope="col">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>¿En qué calle vives?</td>
+                    <td>
+                        <input type="text" name="calle" [(ngModel)]="calle">
+                    </td>
+                    <td>
+                        <div class="form-check">
+                            <input name="dia" [(ngModel)]="valorCalle" value="0" class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault9">
+                            <label class="form-check-label" for="flexRadioDefault9">
+                              0
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input name="dia" [(ngModel)]="valorCalle" value="1" class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault10" checked>
+                            <label class="form-check-label" for="flexRadioDefault10">
+                              1
+                            </label>
+                          </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>¿En qué colonia vive?</td>
+                    <td>
+                        <input type="text" name="colonia" [(ngModel)]="colonia">
+                    </td>
+                    <td>
+                        <div class="form-check">
+                            <input name="dia" [(ngModel)]="valorColonia" value="0" class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefault11">
+                            <label class="form-check-label" for="flexRadioDefault11">
+                              0
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input name="dia" [(ngModel)]="valorColonia" value="1" class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefault12" checked>
+                            <label class="form-check-label" for="flexRadioDefault12">
+                              1
+                            </label>
+                          </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>c) Persona</h3>
+        <table class="table">
+            <thead>
+                <tr>
+
+                    <th scope="col">Preguntas</th>
+                    <th scope="col">Respuesta</th>
+                    <th scope="col">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>¿Cuántos años tiene?</td>
+              
+                <td>
+                    <input type="text" name="anos" [(ngModel)]="anos">
+                </td>
+                <td>
+                    <div class="form-check">
+                        <input name="dia" [(ngModel)]="valorAnos" value="0" class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefault13">
+                        <label class="form-check-label" for="flexRadioDefault13">
+                          0
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input name="dia" [(ngModel)]="valorAnos" value="1" class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefault14" checked>
+                        <label class="form-check-label" for="flexRadioDefault14">
+                          1
+                        </label>
+                      </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    <button type="submit">Enviar</button>
+</form>

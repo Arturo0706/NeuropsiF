@@ -1,0 +1,111 @@
+
+<div>
+    
+<h1 class="centerTitle">
+    Codificacion.ProcesoVisoEspacial
+</h1>
+
+<h3 class="centerText">
+    Observe con atencion la siguiente figura y dibujela, tal y como se ve, en esta hoja.
+</h3><br><br>
+
+<div class="center" >
+    <img src="./assets/Imagen1.png" alt="" width="800px">
+</div><br><br>
+
+<h3 class="centerText">
+    Dibuja de nuevo todos los detalles que recuerdes de la imagen.
+</h3><br><br>
+
+<form action="" (ngSubmit)="DB()" [formGroup]="formVisoEspacial">
+
+    <div class="col-auto">
+        <div  class="input-group">
+
+          <label class="input-group-text">Hora:</label>
+
+            <input type="text" formControlName="hora" class="form-control" placeholder="">
+
+            <div class="alert alert-danger mt-2" [hidden]="hora.valid || hora.pristine">La hora es obligatoria.</div>
+
+          <label class="input-group-text">Total: </label>
+
+            <input type="text" formControlName="total" class="form-control" placeholder="">
+
+            <div class="alert alert-danger mt-2" [hidden]="total.valid || total.pristine">
+                <span *ngIf="total.errors?.['required']">
+                    El Total es obligatorio.
+                </span>
+                <span *ngIf="total.errors?.['pattern']">
+                    Solo se aceptan valores de caracter numerico.
+                </span>
+            </div>
+
+          <button class="btn btn-primary" [disabled]="formVisoEspacial.invalid">Enviar</button>
+          
+        </div>
+    </div>
+
+</form>
+
+<h3 class="centerTitle">
+    Lamina 1. 
+</h3>
+<p class="centerText">
+    Figura semicompleja. Niños de 6 o 7 años de edad y adultos con baja escolaridad (0 a 3 años)
+</p>
+
+</div><br><br>
+
+<div>
+    
+<h3 class="centerText">
+    Observe con atencion la siguiente figura y dibujela, tal y como se ve, en esta hoja.
+</h3><br><br>
+
+<div class="center" >
+    <img src="https://psicologoscordoba.org/wp-content/uploads/test-figura-de-rey.gif" alt="" width="800px">
+</div><br><br>
+
+<h3 class="centerText">
+    Dibuja de nuevo todos los detalles que recuerdes de la imagen.
+</h3><br><br>
+
+<form action="" (ngSubmit)="DB2()" [formGroup]="formVisoEspacial2">
+
+    <div class="col-auto">
+        <div  class="input-group">
+
+          <label class="input-group-text">Hora:</label>
+
+            <input type="text" formControlName="hora2" class="form-control" placeholder="">
+
+            <div class="alert alert-danger mt-2" [hidden]="hora2.valid || hora2.pristine">La hora es obligatoria.</div>
+
+          <label class="input-group-text">Total: </label>
+
+            <input type="text" formControlName="total2" class="form-control" placeholder="">
+
+            <div class="alert alert-danger mt-2" [hidden]="total2.valid || total2.pristine">
+                <span *ngIf="total2.errors?.['required']">
+                    El Total es obligatorio.
+                </span>
+                <span *ngIf="total2.errors?.['pattern']">
+                    Solo se aceptan valores de caracter numerico.
+                </span>
+            </div>
+
+          <button class="btn btn-primary" [disabled]="formVisoEspacial2.invalid">Enviar</button>
+          
+        </div>
+    </div>
+
+</form>
+
+<h3 class="centerTitle">
+    Lamina 2. 
+</h3>
+<p class="centerText">
+    Figura Rey-Osterreith. Niños de 8 años de edad en adelante y adultos con escolaridad media o alta (4 años en adelante)
+</p>
+</div><br><br> 

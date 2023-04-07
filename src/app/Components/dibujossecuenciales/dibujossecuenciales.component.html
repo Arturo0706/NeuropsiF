@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 style="text-align: center;">26.FUNCIONES MOTORAS.DIBUJOS SECUENCIALES</h1>
+  <h4>Instrucciones:</h4>
+  <h4 style="text-align:justify;">
+    Se muestra al sujeto la lámina 18 y se lee: "Observe esta figura y cópiela en esta hoja sin levantar el lápiz del
+papel"</h4>
+    <br>
+    <h4 style="text-align: justify;">Fluidez</h4>
+      <br>
+      <h4 style="text-align: justify;">0 = imposible</h4>
+      <h4 style="text-align: justify;">1 = lento,pero posible</h4>
+      <h4 style="text-align: justify;">2 = normal</h4>
+        
+        <form #formularioMascota="ngForm" (ngSubmit)="formularioEnviado()">
+       Total(2)
+       <input type="text" name="total" placeholder="Total" [(ngModel)]="veintisieteModel.totalf">
+       <br><br>
+
+        <h4 style="text-align: justify;">Continuidad secuencial</h4>
+       <br>
+       <h4 style="text-align: justify;">0 = interrumpe el trazo más de dos veces</h4>
+      <h4 style="text-align: justify;">1 = interrumpe el trazo una o dos veces</h4>
+      <h4 style="text-align: justify;">2 = todos los movimientos son continuos</h4>
+      Total(2)
+      <input type="text" name="total" placeholder="Total" [(ngModel)]="veintisieteModel.totalc">
+      <br><br>
+
+      <h4 style="text-align: justify;">Perseveracion secuencial</h4>
+       <br>
+       <h4 style="text-align: justify;">0 = repetición continua del mismo elemento</h4>
+      <h4 style="text-align: justify;">1 = tendencia a la perseveración: repetición al menos una vez del mismo elemento (ángulo o semicuadrado)</h4>
+      <h4 style="text-align: justify;">2 = normal</h4>
+      Total(2)
+      <input type="text" name="total" placeholder="Total" [(ngModel)]="veintisieteModel.totalps">
+      <br><br>
+
+      <h4 style="text-align: justify;">Perseveracion en movimientos particulares</h4>
+       <br>
+       <h4 style="text-align: justify;">0 = permanece en la misma línea sin continuar la serie</h4>
+      <h4 style="text-align: justify;">1 = repinta una o dos líneas</h4>
+      <h4 style="text-align: justify;">2 = normal</h4>
+      Total(2)
+      <input type="text" name="total" placeholder="Total" [(ngModel)]="veintisieteModel.totalpm">
+      <br><br>
+      Total Dibujos Secuenciales(8)
+      <input type="text" name="total" placeholder="Total" [(ngModel)]="veintisieteModel.total">
+      <br><br>
+      Total Funciones Motoras
+      <input type="text" name="total" placeholder="Total" [(ngModel)]="veintisieteModel.totalfm">
+      <br><br>
+
+  
+    <button type="submit">Guardar</button>
+  </form>
+    <br>
+    <br>
+  
+ 
+</body>
+</html>

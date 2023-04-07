@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 style="text-align: center;">20.FUNCIONES EJECUTIVAS. FLUIDEZ NO VERBAL</h1>
+  <h4>Instrucciones:</h4>
+  <h4 style="text-align:justify;">
+    Se muestra a la persona los ejemplos de la lámina 17 y se indica: "La siguiente tarea consiste en formar diferentes
+figuras trazando únicamente cuatro líneas y uniendo los puntos que aparecen en cada cuadro. En cada uno de
+estos ejemplos se trazaron estas cuatro líneas y se formaron estas figuras"</h4>
+    <br>
+    <h4 style="text-align: justify;">Señalar con el dedo las rutas que se siguieron en los ejemplos: "Como puede ver en este primer caso, no es
+      necesario que una todos los puntos con las cuatro líneas. Además, si es necesario, puede levantar el lápiz de la
+      hoja"</h4>
+      <br>
+      <h4 style="text-align: justify;">Presentar a la persona la hoja adjunta que contiene los cuadros: "En esta hoja usted deberá formar figuras que
+        sean diferentes a estos ejemplos y, a su vez, distintas entre sí. Forme el mayor número posible de figuras, lo más
+        rápido que pueda"
+       </h4>
+        <br>
+        <h4 style="text-align: justify;">Suspender despues de 3 minutos</h4>
+  <br>
+
+  <form #formularioMascota="ngForm" (ngSubmit)="formularioEnviado()">
+    <div class="grid gap-6 mb-6 md:grid-cols-2">
+      <div class="mb-6">
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Intrusiones</label>
+    <input type="text" name="aciertos" placeholder="Intrusiones" [(ngModel)]="veinteModel.intrusiones">
+    <br><br>
+  </div>
+    Perseveraciones:
+    <input type="text" name="intrusiones" placeholder="Perseveraciones" [(ngModel)]="veinteModel.perseveraciones">
+    <br><br>
+    Total:
+    <input type="text" name="total" placeholder="Total" [(ngModel)]="veinteModel.total">
+    <br><br>
+  </div>
+    <button type="submit">Guardar</button>
+  </form>
+    <br>
+    <br>
+  
+ 
+</body>
+</html>

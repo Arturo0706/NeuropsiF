@@ -10,6 +10,26 @@ import { PatientsComponent } from './Components/Patients/patients/patients.compo
 import { CreatePatientsComponent } from './Components/Patients/create-patients/create-patients.component';
 import { EditDeletePatientsComponent } from './Components/Patients/edit-delete-patients/edit-delete-patients.component';
 import { TokenInterceptor } from './Interceptors/token.interceptor';
+import { CodiCarasComponent } from './Components/codi-caras/codi-caras.component';
+import { RetencionDigitosProgresionComponent } from './Components/retencion-digitos-progresion/retencion-digitos-progresion.component';
+import { DeteccionvisualComponent } from './Components/deteccionvisual/deteccionvisual.component';
+import { DibujossecuencialesComponent } from './Components/dibujossecuenciales/dibujossecuenciales.component';
+import { EvocacionComponent } from './Components/evocacion/evocacion.component';
+import { Evocacion2Component } from './Components/evocacion2/evocacion2.component';
+import { FluideznoverbalComponent } from './Components/fluideznoverbal/fluideznoverbal.component';
+import { FormacionCategoriasComponent } from './Components/formacion-categorias/formacion-categorias.component';
+import { MemoriaVerbalEspontaneaComponent } from './Components/Formulario-9/memoria-verbal-espontanea/memoria-verbal-espontanea';
+import { MemoriaVerbalPorClavesComponent } from './Components/Formulario-9/memoria-verbal-por-claves/memoria-verbal-por-claves.component';
+import { MemoriaVerbalPorReconocimientoComponent } from './Components/Formulario-9/memoria-verbal-por-reconocimiento/memoria-verbal-por-reconocimiento.component';
+import { FormularioComponent } from './Components/formulario-modulo6/formulario.component';
+import { HistoriaClinica1Component } from './Components/historia-clinica1/historia-clinica1.component';
+import { HistoriaClinica2Component } from './Components/historia-clinica2/historia-clinica2.component';
+import { OrientacionComponent } from './Components/orientacion/orientacion.component';
+import { ParesAsociadosComponent } from './Components/pares-asociados2/pares-asociados.component';
+import { ParesasociadosComponent } from './Components/paresasociados/paresasociados.component';
+import { ProcesoVisoEspacialComponent } from './Components/proceso-viso-espacial/proceso-viso-espacial.component';
+import { PruebaComponent } from './Components/prueba/prueba.component';
+import { SeriesSucesivasComponent } from './Components/series-sucesivas/series-sucesivas.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +37,28 @@ import { TokenInterceptor } from './Interceptors/token.interceptor';
     LoginComponent,
     PatientsComponent,
     CreatePatientsComponent,
-    EditDeletePatientsComponent
+    EditDeletePatientsComponent,
+    CodiCarasComponent,
+    DeteccionvisualComponent,
+    DibujossecuencialesComponent,
+    EvocacionComponent, 
+    Evocacion2Component,
+    FluideznoverbalComponent,
+    FormacionCategoriasComponent,
+    MemoriaVerbalEspontaneaComponent,
+    MemoriaVerbalPorClavesComponent,
+    MemoriaVerbalPorReconocimientoComponent,
+    FormularioComponent,
+    HistoriaClinica1Component,
+    HistoriaClinica2Component,
+    OrientacionComponent,
+    ParesAsociadosComponent,
+    ParesasociadosComponent,
+    ProcesoVisoEspacialComponent,
+    PruebaComponent,
+    RetencionDigitosProgresionComponent,
+    SeriesSucesivasComponent
+    
   ],
   imports: [
     BrowserModule,
