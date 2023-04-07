@@ -34,6 +34,7 @@ import { MeCarasComponent } from './Components/me-caras/me-caras.component';
 import { MiComponente } from './Components/Fluidez_verbal/inputs/inputs.component';
 import { AppfluidezComponent } from './Components/Fluidez_verbal/fluidex.component';
 import { ResultadoComponent } from './Components/Fluidez_verbal/resultado/resultado.component';
+import { DetecciondigitosComponent } from './Components/detecciondigitos/detecciondigitos.component';
 
 @NgModule({
   declarations: [
@@ -65,8 +66,8 @@ import { ResultadoComponent } from './Components/Fluidez_verbal/resultado/result
     MeCarasComponent,
     MiComponente, 
     AppfluidezComponent,
-    ResultadoComponent
-
+    ResultadoComponent,
+    DetecciondigitosComponent
   ],
   imports: [
     BrowserModule,
