@@ -35,6 +35,11 @@ import { MiComponente } from './Components/Fluidez_verbal/inputs/inputs.componen
 import { AppfluidezComponent } from './Components/Fluidez_verbal/fluidex.component';
 import { ResultadoComponent } from './Components/Fluidez_verbal/resultado/resultado.component';
 import { DetecciondigitosComponent } from './Components/detecciondigitos/detecciondigitos.component';
+import { FuncionesComponent } from './Components/funciones/funciones.component';
+import { FuncionesReacComponent } from './Components/funciones-reac/funciones-reac.component';
+import { FuncionesMotorasComponent } from './Components/funciones-motoras/funciones-motoras.component';
+import { flComponent } from './Components/funciones-motoras/resultado/resultado.component';
+import { apptotal } from './Components/funciones-motoras/total/total.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +72,12 @@ import { DetecciondigitosComponent } from './Components/detecciondigitos/detecci
     MiComponente, 
     AppfluidezComponent,
     ResultadoComponent,
-    DetecciondigitosComponent
+    DetecciondigitosComponent,
+    FuncionesComponent,
+    FuncionesReacComponent,
+    FuncionesMotorasComponent,
+    flComponent,
+    apptotal
   ],
   imports: [
     BrowserModule,

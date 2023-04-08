@@ -1,0 +1,59 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container p {
+    padding: 5px;
+}
+
+.buttons-container button {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 16px;
+    margin-right: 8px;
+  }
+  
+  .buttons-container button:hover {
+    background-color: #fff;
+    color: red;
+  }
+  
+  .buttons-container button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .button-container {
+    text-align: right;
+  }
+  
+  .button-container button {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 16px;
+    margin-right: 8px;
+  }
+  
+  .button-container button:hover {
+    background-color: #fff;
+    color: red;
+  }
+  
+  .button-container button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .button-container .reset-button {
+    float: right;
+    margin-right: 8px;
+  }

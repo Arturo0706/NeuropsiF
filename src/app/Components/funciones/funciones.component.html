@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>23. Funciones Motoras. Reacciones Opuestas</h2>
+    <p>"Cuando yo dé un golpe sobre la mesa, usted deberá dar dos; cuando yo dé dos golpes sobre la mesa, usted
+        deberá dar uno".</p>
+        <p>Una vez comprendidas las instrucciones, la tarea se repite cinco veces, dando al azar uno o dos golpes</p>
+        <form class="buttons-container">
+            <div *ngFor="let button of buttons">
+              <button type="button" (click)="addTotal(button)" [disabled]="button.selected">
+                {{ button.label }}
+              </button>
+            </div>
+            <br>
+            <div>Total {{ total }}/(2)</div>
+          </form>
+    <form class="button-container">
+      <button type="button" (click)="reset()">Volver hacer la prueba</button>
+    </form>
+</div>

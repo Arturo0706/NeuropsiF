@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>24. Funciones Motoras. Reacciones De Elección</h2>
+    <p>"Ahora, Cuando yo dé un golpe sobre la mesa, usted deberá dar dos golpes; pero cuando yo dé dos golpes sobre la mesa, usted
+       no deberá dar uno".</p>
+        <p>Una vez comprendidas las instrucciones, la tarea se repite cinco veces, dando al azar uno o dos golpes</p>
+        <form class="buttons-container">
+            <div *ngFor="let button of buttons">
+              <button type="button" (click)="addTotal(button)" [disabled]="button.selected">
+                {{ button.label }}
+              </button>
+            </div>
+            <br>
+            <div>Total {{ total }}/(2)</div>
+          </form>
+    <form class="button-container">
+      <button type="button" (click)="reset()">Volver hacer la prueba</button>
+    </form>
+</div>
