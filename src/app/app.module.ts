@@ -40,6 +40,7 @@ import { FuncionesReacComponent } from './Components/funciones-reac/funciones-re
 import { FuncionesMotorasComponent } from './Components/funciones-motoras/funciones-motoras.component';
 import { flComponent } from './Components/funciones-motoras/resultado/resultado.component';
 import { apptotal } from './Components/funciones-motoras/total/total.component';
+import { CambiomanoComponent } from './Components/cambiomano/cambiomano.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,9 @@ import { apptotal } from './Components/funciones-motoras/total/total.component';
     FuncionesReacComponent,
     FuncionesMotorasComponent,
     flComponent,
-    apptotal
+    apptotal,
+    CambiomanoComponent
+
   ],
   imports: [
     BrowserModule,

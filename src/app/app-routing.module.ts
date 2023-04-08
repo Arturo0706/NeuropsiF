@@ -33,6 +33,7 @@ import { FuncionesComponent } from './Components/funciones/funciones.component';
 import { FuncionesReacComponent } from './Components/funciones-reac/funciones-reac.component';
 import { FuncionesMotorasComponent } from './Components/funciones-motoras/funciones-motoras.component';
 import { flComponent } from './Components/funciones-motoras/resultado/resultado.component';
+import { CambiomanoComponent } from './Components/cambiomano/cambiomano.component';
 
 
 
@@ -72,6 +73,8 @@ const ROUTES:Routes =[
   {path:'funciones', component:FuncionesComponent},
   {path:'funcionesreact', component:FuncionesReacComponent},
   {path:'funcionesmotoras', component:FuncionesMotorasComponent},
+  {path:'funcioncambio', component:CambiomanoComponent},
+
   
   
   
