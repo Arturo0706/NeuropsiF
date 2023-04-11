@@ -34,11 +34,13 @@ import { FuncionesReacComponent } from './Components/funciones-reac/funciones-re
 import { FuncionesMotorasComponent } from './Components/funciones-motoras/funciones-motoras.component';
 import { flComponent } from './Components/funciones-motoras/resultado/resultado.component';
 import { CambiomanoComponent } from './Components/cambiomano/cambiomano.component';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
 
 
 
 const ROUTES:Routes =[
   { path: '', component: LoginComponent, pathMatch:'full'},
+  { path: 'login', component: LoginComponent, pathMatch:'full'},
   {path:'pacientes', component:PatientsComponent, canActivate:[AuthGuard]},
   {path:'nuevoPaciente', component:CreatePatientsComponent,canActivate:[AuthGuard]},
   {path:'editarEliminarPaciente/:id', component:EditDeletePatientsComponent,canActivate:[AuthGuard]},
@@ -74,8 +76,11 @@ const ROUTES:Routes =[
   {path:'funcionesreact', component:FuncionesReacComponent},
   {path:'funcionesmotoras', component:FuncionesMotorasComponent},
   {path:'funcioncambio', component:CambiomanoComponent},
+  //diseño dash 
+  {path:'dashboard', component:  DashboardComponent
+},
 
-  
+
   
   
 

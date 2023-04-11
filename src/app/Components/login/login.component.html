@@ -1,5 +1,5 @@
 
-<div class="outer">
+<div class="router">
     <div class="container">
         <div class="row">
             <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
@@ -33,13 +33,9 @@
                                     class="text-danger">*Contraseña requerida</small>
                             </div>
                             <div class="form-inline fr mt-4">
-                                <a id="forget" class="font-weight-bold">¿Olvidó la contraseña?</a>
                             </div>
                             <button (click)="onLogin()" type="submit" class="btn btn-primary btn-block mt-4 w-100">Ingresar</button>
-                            <div class="text-center pt-4 text-muted">
-                                ¿No tiene una cuenta?
-                                <a id="forget" routerLink="/signup">¡Registrate ahora!</a>
-                            </div>
+                            
                         </form>
                     </div>
                     <div class="mx-3 my-2 py-2 bordert">

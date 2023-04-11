@@ -41,6 +41,10 @@ import { FuncionesMotorasComponent } from './Components/funciones-motoras/funcio
 import { flComponent } from './Components/funciones-motoras/resultado/resultado.component';
 import { apptotal } from './Components/funciones-motoras/total/total.component';
 import { CambiomanoComponent } from './Components/cambiomano/cambiomano.component';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
+//componentes de diseño
+
+
 
 @NgModule({
   declarations: [
@@ -79,7 +83,9 @@ import { CambiomanoComponent } from './Components/cambiomano/cambiomano.componen
     FuncionesMotorasComponent,
     flComponent,
     apptotal,
-    CambiomanoComponent
+    CambiomanoComponent,
+    //diseño dash
+    DashboardComponent
 
   ],
   imports: [
